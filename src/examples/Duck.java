@@ -10,11 +10,15 @@ public class Duck {
 
 	private String favoriteFood;
 	private int lifeExpectancy;
+	private static int numberOfCreations;
+	private String color;
 	
 
-	public Duck(String favoriteFood, int lifeExpectancy) {
+	public Duck(String favoriteFood, int lifeExpectancy, String color) {
 		this.favoriteFood = favoriteFood;
 		this.lifeExpectancy = lifeExpectancy;
+		this.color = color;
+		numberOfCreations++;
 	}
 
 	public void waddle() {
@@ -25,6 +29,17 @@ public class Duck {
 	@Override
 	public String toString() {
 		return "This duck likes to eat " + this.favoriteFood + " and will live to be " + this.lifeExpectancy + ".";
+	}
+	
+	public static int getNumberOfCreations() {
+		return numberOfCreations;
+	}
+	public String getColor() {
+		return color;
+	}
+	
+	public static void reset() {
+		numberOfCreations = 0;
 	}
 	
 	public void quack() {
