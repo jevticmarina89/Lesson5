@@ -11,12 +11,14 @@ public class Smurf {
 
 	private String name;
 
-	Smurf(String name) {
+	Smurf(String name, String hatColor, String girlOrBoy) {
 		this.name = name;
+		this.hatcolor = hatColor;
+		this.gender = girlOrBoy;
 	}
 
 	public String getName() {
-		return "My name is " + name + " Smurf.";
+		return "My name is " + name + " Smurf. ";
 	}
 
 	public void eat() {
@@ -24,15 +26,24 @@ public class Smurf {
 	}
 
 	/* Papa Smurf wears a red hat, all the others are white. */
+	private String hatcolor;
+
+	//public void setHatcolor(String hatColor) {
+	//	this.hatcolor = hatColor;
+	//}
+
 	public String getHatColor() {
 		// 3. Fill in this method
-		return "";
+		return name + " Smurf has a " + hatcolor + " hat. ";
 	}
 
 	/* Smurfette is the only female Smurf. */
-	public String isGirlOrBoy() {
+	private String gender;
+	
+	public String getIsGirlOrBoy() {
 		// 4. Fill in this method
-		return "";
+	
+		return name +" Smurf is a " + gender + ".";
 	}
 
 }
