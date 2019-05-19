@@ -22,15 +22,24 @@ public class HarryPotter {
 	}
 
 	void spyOnSnape() {
-		System.out.println("Harry sees Professor Snape doing nefarious things.");
+		System.out.println("Harry sees Professor Snape doing nefarioHus things.");
 	}
 
 	public static void main(String[] args) {
+		
+		HarryPotter harryP = new HarryPotter();
+		
+		harryP.makeInvisible(true);
+		harryP.spyOnSnape();
+		harryP.makeInvisible(false);
+		harryP.castSpell("stupefy");
+		
+		
 		// 1. make harry potter
 		// 2. become invisible
 		// 3. spy on professor snape
 		// 4. become visible again
-		// 5. cast a “stupefy” spell
+		// 5. cast a â€œstupefyâ€� spell
 	}
 
 }
